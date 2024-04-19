@@ -102,7 +102,7 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "outtmpl": f"{output_path}.%(ext)s",
         "verbose": logger.getEffectiveLevel() == logging.DEBUG,
         "cookiefile": cookie,
-        "merge_output_format": "mkv",
+        "merge_output_format": "mp4",
         "writesubtitles": True,
         "no_write_sub": True,
     }
