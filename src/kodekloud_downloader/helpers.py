@@ -6,6 +6,7 @@ from typing import List
 import prettytable
 import requests
 import yt_dlp
+import time
 
 from kodekloud_downloader.models import Course
 
@@ -106,6 +107,7 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "writesubtitles": True,
         "no_write_sub": True,
     }
+    time.sleep(10)
     logger.debug(f"Calling download with following options: {ydl_opts}")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(url)
