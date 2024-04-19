@@ -104,10 +104,10 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "verbose": logger.getEffectiveLevel() == logging.DEBUG,
         "cookiefile": cookie,
         "merge_output_format": "mp4",
-        "writesubtitles": False,
+        "writesubtitles": True,
         "no_write_sub": True,
     }
-    time.sleep(4)
+    time.sleep(1)
     logger.debug(f"Calling download with following options: {ydl_opts}")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(url)
