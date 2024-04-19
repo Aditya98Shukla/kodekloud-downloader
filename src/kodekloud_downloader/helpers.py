@@ -107,7 +107,7 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "writesubtitles": False,
         "no_write_sub": True,
     }
-    time.sleep(10)
+    time.sleep(4)
     logger.debug(f"Calling download with following options: {ydl_opts}")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download(url)
