@@ -104,7 +104,7 @@ def download_video(url: str, output_path: Path, cookie: str, quality: str) -> No
         "verbose": logger.getEffectiveLevel() == logging.DEBUG,
         "cookiefile": cookie,
         "merge_output_format": "mp4",
-        "writesubtitles": True,
+        "writesubtitles": False,
         "no_write_sub": True,
     }
     time.sleep(3)
